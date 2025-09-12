@@ -4,7 +4,7 @@ import uuid
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq  
 from langchain.schema import HumanMessage, AIMessage, SystemMessage 
-from langchain.utilities import SerpAPIWrapper 
+from langchain_community.utilities import SerpAPIWrapper
 from playwright.sync_api import sync_playwright 
 from bs4 import BeautifulSoup 
 
@@ -97,26 +97,4 @@ def run_chat():
         print("\nAssistant:\n", answer, "\n\n")
 
 # ================== FLASK INTEGRATION ==================
-from flask import Flask, request, jsonify # type: ignore
 
-app = Flask(__name__)
-
-@app.route("/chat", methods=["POST"])
-def chat_endpoint():
-    data = request.json
-    user_message = data.get("message", "").strip()
-    session_id = data.get("session_id") or str(uuid.uuid4())
-
-    if not user_message:
-        return jsonify({"error": "No message provided"}), 400
-
-    reply = ask_assistant(session_id, user_message)
-    return jsonify({"reply": reply, "session_id": session_id})
-
-# ================== RUN ==================
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 1 and sys.argv[1] == "flask":
-        app.run(debug=True, port=5000)
-    else:
-        run_chat()
