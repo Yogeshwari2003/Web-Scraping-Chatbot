@@ -1,5 +1,4 @@
 # Byte-compiled / optimized / DLL files
-<<<<<<< HEAD
 .env
 __pycache__/
 *.pyc
@@ -10,12 +9,10 @@ chat_sessions/
 .Python
 env/
 venv/
-=======
 __pycache__/
 *.py[codz]
 *$py.class
 
->>>>>>> 397062a0410695f4c1077469552bb39217bea7b0
 # C extensions
 *.so
 
@@ -218,10 +215,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-<<<<<<< HEAD
+
 .vscode/
 __pycache__/
 chat_sessions/
 
-=======
->>>>>>> 397062a0410695f4c1077469552bb39217bea7b0
