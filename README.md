@@ -3,12 +3,12 @@ An AI-powered chatbot backend built with Flask that combines LLaMA 3.3 (via Groq
 
 🚀 Features
 
- LLM-Powered – Uses LLaMA 3.3 70B via Groq for fast, intelligent responses
- Real-Time Web Search – Integrates SerpAPI to fetch live search results
- Website Scraping – Scrapes and parses live web pages from URLs shared in chat
- Multi-Session Support – Maintains separate conversation history per user via unique session IDs
- Chat History Saving – Automatically saves each session as a JSON file
- Dual Interface – Accessible via REST API (Flask) or CLI terminal chat
+LLM-Powered – Uses LLaMA 3.3 70B via Groq for fast, intelligent responses
+Real-Time Web Search – Integrates SerpAPI to fetch live search results
+Website Scraping – Scrapes and parses live web pages from URLs shared in chat
+Multi-Session Support – Maintains separate conversation history per user via unique session IDs
+Chat History Saving – Automatically saves each session as a JSON file
+Dual Interface – Accessible via REST API (Flask) or CLI terminal chat
 
 
 🛠️ Tech Stack
@@ -35,5 +35,6 @@ SERPAPI_API_KEY=your_serpapi_key_here
 ▶️ Run the App
 API Server (Flask):
 python app.py
+
 CLI Chat Mode:
 python main.py
