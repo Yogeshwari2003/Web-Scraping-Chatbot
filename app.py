@@ -1,6 +1,7 @@
-from flask import Flask, request, jsonify # type: ignore
-from main import ask_assistant
+from flask import Flask, request, jsonify
+from main import ask_assistant, run_chat
 import uuid
+import sys
 
 app = Flask(__name__)
 
@@ -16,7 +17,6 @@ def chat_endpoint():
     reply = ask_assistant(session_id, user_message)
     return jsonify({"reply": reply, "session_id": session_id})
 
-# ================== RUN ==================
 if __name__ == "__main__":
-  
+    
         app.run(debug=True, port=5000)
