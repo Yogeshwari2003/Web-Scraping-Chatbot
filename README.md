@@ -22,13 +22,13 @@ Scraping => Playwright, BeautifulSoup4
 git clone https://github.com/Yogeshwari2003/Web-Scraping-Chatbot.git
 cd Web-Scraping-Chatbot
 
-3. Install dependencies
+2. Install dependencies
 pip install -r requirements.txt
 
-4. Install Playwright browser
+3. Install Playwright browser
 playwright install chromium
 
-5. Create a .env file
+4. Create a .env file
 GROQ_API_KEY=your_groq_api_key_here
 SERPAPI_API_KEY=your_serpapi_key_here
 
